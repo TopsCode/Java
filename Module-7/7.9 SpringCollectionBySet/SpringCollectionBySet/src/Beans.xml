@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="emp" class="com.bean.Employee">
+		<property name="empname" value="krishna" />
+		<property name="empaddress" value="Sojitra" />
+		<property name="phone" value="98982525"></property>
+	</bean>
+
+	<bean id="student" class="com.bean.Student">
+		<property name="set">
+			<set>
+				<ref bean="emp" />
+				<value>sakina</value>
+				<value>Ahmedabad</value>
+				<value>8898899822</value>
+
+				<value>manali</value>
+				<value>gandhinager</value>
+				<value>868565656</value>
+
+				<value>manali</value>
+				<value>gandhinager</value>
+				<value>868565656</value>
+
+
+				<bean class="com.bean.Employee">
+					<property name="empname" value="pooja" />
+					<property name="empaddress" value="Anand" />
+					<property name="phone" value="98982525"></property>
+				</bean>
+			</set>
+		</property>
+
+	</bean>
+</beans>
