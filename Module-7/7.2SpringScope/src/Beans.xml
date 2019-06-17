@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+/*
+
+When defining a <bean> you have the option of declaring a 
+scope for that bean. For example, to force Spring to produce 
+a new bean instance each time one is needed, you should 
+declare the bean's scope attribute to be prototype
+
+*/
+<bean id="s1" class="com.bean.Student" scope="prototype">
+	
+</bean>
+</beans>

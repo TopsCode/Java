@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+/*
+
+In Spring, objects define their associations (dependencies) 
+and do not worry about how they will get those dependencies. 
+It is the responsibility of Spring to provide the required 
+dependencies for creating objects.
+
+Controls whether bean properties are "autowired". 
+This is an automagical process in which bean references  
+don't need to be coded explicitly in the XML bean definition 
+file, but rather the Spring container works out  dependencies.
+
+"byName" Autowiring by  property name. If a bean of class Person 
+exposes a "phone" property, Spring will try to set this to 
+the value of the  bean "phone" in the current container. 
+If there is no matching bean by name, nothing special happens. 
+
+*/
+<bean id="p" class="com.bean.Phone">
+	<property name="pno" value="123"/>
+</bean>
+<bean id="person" class="com.bean.Person" autowire="byName">
+	<property name="pname" value="Jigar"/>
+	<!-- <property name="phone" ref="phone"/> -->
+</bean>
+</beans>

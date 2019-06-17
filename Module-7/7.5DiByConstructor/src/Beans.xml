@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+/*
+
+In Spring, objects define their associations (dependencies)
+and do not worry about how they will get those dependencies. 
+It is the responsibility of Spring to provide the required 
+dependencies for creating objects.
+
+Here it is provided by constuctor 
+	with <constructor-arg name="fname" value="Jigar"/>
+
+*/
+<bean id="s1" class="com.bean.Student">
+	<constructor-arg name="fname" value="Jigar"/>
+	<constructor-arg name="lname" value="Thakkar"/>
+	<constructor-arg name="email" value="jigar@gmail.com"/>
+</bean>
+
+</beans>
