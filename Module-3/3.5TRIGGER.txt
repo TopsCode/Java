@@ -1,0 +1,11 @@
+/*TRIGGER EXAMPLE */
+
+CREATE TABLE YourAccount (acct_num INT, amount INT);
+
+CREATE TRIGGER Total AFTER INSERT ON YourAccount
+       FOR EACH ROW SET @sum = @sum + NEW.amount;
+       
+       SET @sum=0 ;          
+        INSERT INTO YourAccount (acct_num,amount) VALUES(26,200);             
+        INSERT INTO YourAccount (acct_num,amount) VALUES(27,500);
+       SELECT @sum;

@@ -1,0 +1,26 @@
+/* Store Procedure with no argument and no return type */
+
+DELIMITER //
+CREATE PROCEDURE MyTEST()
+BEGIN
+SELECT * FROM shippers;
+SELECT * FROM region;
+END //
+DELIMITER ;
+
+CALL `MyTEST`()
+
+/* Store Procedure with argument and no return type */
+
+SELECT COUNT(Phone) FROM shippers WHERE Phone = '(503) 555-9831';
+
+DELIMITER //
+CREATE PROCEDURE GetCount(IN  MOB VARCHAR(50),OUT total INT)
+BEGIN
+SELECT  COUNT(Phone) INTO total FROM `shippers`  WHERE Phone=MOB;
+END//
+DELIMITER ;
+
+SET @Phone='(503) 555-9831';
+CALL GetCount(@Phone,@total);
+SELECT @total
