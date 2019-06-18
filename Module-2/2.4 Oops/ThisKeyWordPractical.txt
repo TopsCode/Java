@@ -1,0 +1,122 @@
+package com.keywords;
+
+public class ThisDemo1 {
+
+	void data() {
+		System.out.println("From Data...");
+	}
+	void show() {
+		this.data();
+	}
+	public static void main(String[] args) {
+		ThisDemo1 d = new ThisDemo1();
+		d.show();
+	}
+}
+----------------------------------------------
+package com.keywords;
+
+public class ThisDemo2 {
+	
+	int id;
+	String name;
+	
+	public ThisDemo2(int id,String name) {
+		this.id=id;
+		this.name=name;
+	}
+	
+	public static void main(String[] args) {
+		ThisDemo2 d = new ThisDemo2(25, "Parth");
+		System.out.println(d.id);
+		System.out.println(d.name);
+	}
+}
+----------------------------------------------
+package com.keywords;
+
+public class ThisDemo3 {
+	
+	public ThisDemo3() {
+		System.out.println("From Constructor...");
+	}
+	
+	public ThisDemo3(int i) {
+		this();
+		System.out.println(" I = "+i);
+	}
+	
+	public static void main(String[] args) {
+		ThisDemo3 d = new ThisDemo3(25);
+	}
+}
+----------------------------------------------
+package com.keywords;
+
+public class ThisDemo4 {
+	
+	int id=25;
+	String name = "Mark"; 
+
+	void data(ThisDemo4 d) {
+		System.out.println("Id : "+d.id);
+		System.out.println("Name : "+d.name);
+	}
+	
+	void show() {
+		data(this);
+	}
+	
+	public static void main(String[] args) {
+		ThisDemo4 d = new ThisDemo4();
+		d.show();
+	}
+}
+----------------------------------------------
+package com.keywords;
+
+class Person{
+	
+	public Person(ThisDemo5 d) {
+		d.show();
+	}
+	
+}
+public class ThisDemo5 {
+	
+	int id=25;
+	String name="Mark";
+	
+	public ThisDemo5() {
+		Person p = new Person(this);
+	}
+	void show() {
+		System.out.println("Id : "+id);
+		System.out.println("Name : "+name);
+	}
+	public static void main(String[] args) {
+		ThisDemo5 d = new ThisDemo5();
+	}
+}
+----------------------------------------------
+package com.keywords;
+
+public class ThisDemo6 {
+	
+	int id=25;
+	String name="Mark";
+	
+	ThisDemo6 data() {
+		return this;
+	}
+	void show() {
+		//ThisDemo6 d = new ThisDemo6();
+		ThisDemo6 d = data();
+		System.out.println("Id = "+d.id);
+		System.out.println("Name = "+d.name);
+	}
+	public static void main(String[] args) {
+		ThisDemo6 d = new ThisDemo6();
+		d.show();
+	}
+}

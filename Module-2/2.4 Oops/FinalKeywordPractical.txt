@@ -1,0 +1,41 @@
+package com.keywords;
+
+public class FinalDemo1 {
+	public static void main(String[] args) {
+		final int i=25;
+	//	i=7;
+		System.out.println(i);
+	}
+}
+----------------------------------------------------
+package com.keywords;
+
+class Student{
+	final void data() {
+		System.out.println("From Data");
+	}
+}
+public class FinalDemo2 extends Student{
+	
+//	void data() {
+//		System.out.println("FRom FinalDemo2 data");
+//	}
+	
+	public static void main(String[] args) {
+		
+	}
+}
+----------------------------------------------------
+package com.keywords;
+
+//final class Test{
+//	
+//}
+//public class FinalDemo3 extends Test{
+//	
+//	public static void main(String[] args) {
+//		
+//	}
+//	
+//}
+----------------------------------------------------

@@ -1,0 +1,100 @@
+package com.keywords;
+
+class Test2{
+	static void data() {
+		System.out.println("FRom Test...");
+	}
+}
+public class StaticDemo1  extends Test2{
+	
+//	void data() {
+//		System.out.println("FRom StaticDemo1");
+//	}
+	
+	public static void main(String[] args) {
+		
+	}
+}
+------------------------------------------------------
+package com.keywords;
+
+public class StaticDemo2 {
+	
+	String name;
+	static int college_num=123;
+	
+	
+	
+	public static void main(String[] args) {
+		StaticDemo2 d1 = new StaticDemo2();
+		StaticDemo2 d2 = new StaticDemo2();
+		StaticDemo2 d3 = new StaticDemo2();
+		
+		college_num=456;
+		
+		
+	}
+}
+------------------------------------------------------
+package com.keywords;
+
+public class StaticDemo3 {
+	
+	static int i;
+	
+	static {
+		i=2*5;
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(i);
+		i=25;
+		System.out.println(i);
+		System.out.println(i);
+	}
+}
+------------------------------------------------------
+package com.keywords;
+
+public class StaticDemo4 {
+	
+	static{
+		System.out.println("Hello");
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+}
+------------------------------------------------------
+package com.keywords;
+
+public class StaticDemo5 {
+	
+	void data() {
+		System.out.println("From Data");
+	}
+	static void show() {
+		System.out.println("From Show");
+	}
+	public static void main(String[] args) {
+		StaticDemo5 d = new StaticDemo5();
+		d.data();
+		
+		show();
+	}
+}
+------------------------------------------------------
+package com.keywords;
+
+class Hello{
+	static void show() {
+		System.out.println("From Show...");
+	}
+}
+
+public class StaticDemo6 {
+	public static void main(String[] args) {
+		Hello.show();
+	}
+}

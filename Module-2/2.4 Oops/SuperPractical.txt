@@ -1,0 +1,70 @@
+package com.keywords;
+
+class A{
+	int i;
+}
+class B extends A{
+	
+	int j;
+	
+	public B(int a,int b){
+		super.i=a;
+		j=b;
+	}
+	void show() {
+		System.out.println("I = "+i);
+		System.out.println("J = "+j);
+	}
+}
+public class SuperDemo1 {
+	public static void main(String[] args) {
+		B b1 = new B(140, 50);
+		b1.show();
+	}
+}
+-----------------------------------------------
+package com.keywords;
+
+class A1{
+	public A1(){
+		System.out.println("FRom A1");
+	}
+	public A1(int i){
+		System.out.println("FRom : "+i);
+	}
+}
+class B1 extends A1{
+	public B1() {
+	
+	}
+	public B1(int i) {
+		super(7);
+		System.out.println("B = "+i);
+	}
+}
+public class SuperDemo2 {
+	public static void main(String[] args) {
+		B1 b = new B1(5);
+	}
+}
+-----------------------------------------------
+package com.keywords;
+
+class Morning{
+	void dataMorning(int i) {
+		System.out.println("Morning : "+i);
+	}
+}
+class Noon extends Morning{
+	void dataNoon() {
+		super.dataMorning(5);
+		System.out.println("Noon");
+	}
+} 
+public class SuperDemo3 {
+	public static void main(String[] args) {
+		Noon n = new Noon();
+		n.dataNoon();
+	}
+}
+-----------------------------------------------
